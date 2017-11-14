@@ -5,16 +5,16 @@ int main(int argc ,char **argv)
 
 	if(argc !=3)
 	{
-	 	printf("Usage:./client port_number ip_address\n");
-		 return;
+		printf("Usage:./client port_number ip_address\n");
+		return;
 	}
 	int sfd,r,len;
 	struct sockaddr_in v;
 	sfd=socket(AF_INET,SOCK_STREAM,0);
 	if(sfd<0)
 	{
-	 	perror("socket");
-		 return;
+		perror("socket");
+		return;
 	}
 
 	v.sin_family=AF_INET;
@@ -27,17 +27,17 @@ int main(int argc ,char **argv)
 		return ;
 	}
 
-	char s[500];
-	bzero(s,sizeof(s));
+	char s[5000];
 	while(1)
 	{
 		printf("String : ");
 		scanf(" %s",s);
 		write(sfd,s,strlen(s)+1);
 		if(strcmp(s,"exit")==0)
-			 return;
+			return;
+	        bzero(s,sizeof(s));
 		read(sfd,s,sizeof(s));
-		printf("%s",s);
+		printf("%s\n",s);
 	}
 
 	return 0;
