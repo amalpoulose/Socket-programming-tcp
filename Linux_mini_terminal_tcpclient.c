@@ -31,7 +31,7 @@ int main(int argc ,char **argv)
 	while(1)
 	{
 		printf("String : ");
-		scanf(" %s",s);
+		scanf(" %[^\n]",s);
 		write(sfd,s,strlen(s)+1);
 		if(strcmp(s,"exit")==0)
 			return;
