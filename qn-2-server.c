@@ -33,12 +33,11 @@ int main(int argc ,char **argv)
 		perror("listen");
 		return ;
 	}
-	float result,result1;
+	float result;
 	char s[50];
 	nsfd=accept(sfd,(struct sockaddr*)&v1,&len);
 	read(nsfd,s,sizeof(s));
 	result=my_atof(s);
-	result1=atof(s);
 	write(nsfd,&result,sizeof(float));
 
 	return 0;
