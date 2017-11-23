@@ -1,13 +1,5 @@
 #include"header.h"
 
-void space_bgn(char *);
-void seperator(char **,char *,char);
-void my_isr(int n)
-{
-	wait(0);
-}
-
-
 int main(int argc ,char **argv)
 {
 
