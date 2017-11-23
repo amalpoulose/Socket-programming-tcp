@@ -139,11 +139,7 @@ void sort(struct node *ptr)
 				swp->obj = ptr->obj;
 				ptr->obj = temp->obj;
 				temp->obj= swp->obj;
-
-				/*			swp->next = ptr->next;
-							ptr->next =temp->next;
-							temp->next=swp->next;
-				 */		}
+			}
 				temp=temp->next;
 		}
 		ptr=ptr->next;
