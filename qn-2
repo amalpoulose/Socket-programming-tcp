@@ -1,0 +1,2 @@
+client will send a string to server
+in server design an atof function and send the result to client
