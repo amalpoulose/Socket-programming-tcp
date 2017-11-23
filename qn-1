@@ -1,0 +1,5 @@
+client will take one string from user and send it to server
+
+server will receive it and reverse every word and send back to client
+
+client will read the result and print it on the screen
