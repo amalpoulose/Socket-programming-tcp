@@ -55,7 +55,7 @@ int main(int argc,char **argv)
 		return;
 	}
 
-	st temp;
+	
 	char info[100];
 	time_t t;
 	fd=open("info.log",O_WRONLY|O_CREAT|O_TRUNC,0777);
@@ -67,6 +67,7 @@ int main(int argc,char **argv)
 		sprintf(info,"%s\tip  :  %s\n\tport : %d\n\tconnected\n",ctime(&t),inet_ntoa(v2.sin_addr),(int)ntohs(v2.sin_port));
 		write(fd,info,strlen(info));
 		printf("%s\n",info);
+                st temp;
 		while(1)
 		{
 			if(read(nsfd,&temp,sizeof(temp))<=0)
@@ -81,6 +82,7 @@ int main(int argc,char **argv)
 					break;
 				case 3: printf("sorting....\n");
 					sort(hptr);
+					print(hptr);
 					printf("Done\n");
 					break;
 
