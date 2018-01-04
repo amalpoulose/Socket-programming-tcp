@@ -71,7 +71,6 @@ int main(int argc,char **argv)
 				else printf("No data found\n");
 				printf("press any key  : ");
 				scanf(" %c",&ch);
-				break;
 			case 3: temp.option=3;
 				write(sfd,&temp,sizeof(temp));
 				break;
@@ -90,4 +89,3 @@ int main(int argc,char **argv)
 	return 0;
 
 }
-
