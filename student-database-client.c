@@ -69,7 +69,7 @@ int main(int argc,char **argv)
 				if(temp.rollno != 0)
 				printf("%s   %d   %f\n\n",temp.name,temp.rollno,temp.mark);
 				else printf("No data found\n");
-				printf("press any key  : ");
+				printf("\npress any key  : ");
 				scanf(" %c",&ch);
 			case 3: temp.option=3;
 				write(sfd,&temp,sizeof(temp));
