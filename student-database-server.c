@@ -119,7 +119,7 @@ void search(struct node *ptr,st *temp)
 		if(ptr->obj.rollno==temp->rollno)
 		{
 			*temp=ptr->obj;
-			break;
+			return;
 		}
 		printf("%s %d \n",ptr->obj.name,ptr->obj.rollno);
 		ptr=ptr->next;
@@ -161,6 +161,4 @@ void print(struct node *ptr)
 		ptr=ptr->next;
 	}
 }
-
-
 
