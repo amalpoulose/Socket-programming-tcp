@@ -32,7 +32,6 @@ int main(int argc,char **argv)
 
 	len=sizeof(v1);
 
-
 	if(connect(sfd,(struct sockaddr*)&v1,len)<0)
 	{
 		perror("connect");
@@ -67,7 +66,9 @@ int main(int argc,char **argv)
 				write(sfd,&temp,sizeof(temp));
 				if(read(sfd,&temp,sizeof(temp))<=0)
 					break;
+				if(temp.rollno != 0)
 				printf("%s   %d   %f\n\n",temp.name,temp.rollno,temp.mark);
+				else printf("No data found\n");
 				printf("press any key  : ");
 				scanf(" %c",&ch);
 				break;
